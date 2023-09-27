@@ -133,10 +133,8 @@ For subsequent apps that you create, you can click the "configure account" butto
 
 Now that your GitHub repository is connected, name your Blueprint, and choose the branch to deploy from (likely you should just leave this as `main`), then enter a name for the app and click "Apply":
 
-
-![](/assets/render-new-blueprint-6.png)
+![](/assets/render-new-blueprint-6-fixed.png)
 {: bleed-full }
-
 
 <div class="bg-red-100 py-1 px-5" markdown="1">
 
