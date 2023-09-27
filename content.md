@@ -170,6 +170,8 @@ Here's something neat: Because we set Render to deploy from our `main` branch an
 
 And that's it! Your web site is live, and you can share the link with anyone. 🎉
 
+Your [Render dashboard at dashboard.render.com](https://dashboard.render.com/) is where you can view and interact with any of your deployed apps.
+
 If you want a custom domain name for your app, you can follow the steps outlined in [this manual from Render](https://render.com/docs/custom-domains).
 
 You've successfully deployed your Ruby app on Render! Now your creation is accessible to the world. Feel free to experiment, expand your app, and keep learning.
