@@ -125,7 +125,7 @@ Detailed instructions on creating Blueprints can be found in the [Render Docs](h
 For subsequent apps that you create, you can click the "configure account" button on your Render dashboard and add more repositories by following similar steps. However, this time, you will be brought to your GitHub account settings where you will see a similar interface to add more repositories and save the changes.
 </div>
 
-![](/assets/render-new-blueprint-5.png)
+![](/assets/render-new-blueprint-5-fixed.png)
 
 ### Deploy your Blueprint
 
