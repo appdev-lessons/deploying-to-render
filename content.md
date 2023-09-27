@@ -13,10 +13,6 @@ The steps in the lesson will allow you to deploy both static HTML websites and d
 
 Render offers a free usage tier known as the "[Individual Plan](https://render.com/pricing)" that is perfect for hosting side projects and learning purposes. This plan includes 750 hours of running time per month, 100 GB of egress bandwidth, and 500 build minutes. The best part is, no credit card is required for the free tier.
 
-<aside markdown="1">
-Please note that databases on the free plan are deleted after 90 days. If you plan to use your app beyond 90 days, consider upgrading to a paid plan.
-</aside>
-
 Web Services on the free instance type are automatically spun down after 15 minutes of inactivity. When a new request for a free service comes in, Render spins it up again so it can process the request.
 
 This will cause a delay in the response of the first request after a period of inactivity while the instance spins up.
@@ -56,10 +52,6 @@ Commit and push this change to your repository to proceed.
 ### Create a new Blueprint
 
 For every app you deploy on Render, you'll need to create a new "Blueprint Instance" to specify rules for that app.
-
-<aside markdown="1">
-Detailed instructions on creating Blueprints can be found in the [Render Docs](https://render.com/docs/deploy-rails#deploy-to-render).
-</aside>
 
 First, go to your Render [dashboard](https://dashboard.render.com/), and click on "Blueprints" and then "New Blueprint Instance." (Note: you can also click the "New +" button on the top and select "Blueprint".)
 
