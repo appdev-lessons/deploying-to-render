@@ -39,7 +39,7 @@ Now, let's dive into deploying your app!
 
 Before we deploy, let's set up the `render.yaml` file in your project repository. This file tells Render how to manage your app's deployment.
 
-#### `render.yaml`` file
+#### `render.yaml` file
 
 Create a new file named `render.yaml` in your project root directory and replace `MYAPPNAME` with your application's name (e.g. `hello-world` or something else; only use letters and dashes in the name, no spaces).
 
