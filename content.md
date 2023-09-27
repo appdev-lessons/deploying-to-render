@@ -81,9 +81,6 @@ set -o errexit
 
 # Uncomment the line depending on the framework you are deploying
 
-# Static HTML
-# bundle exec rackup
-
 # Sinatra
 # bundle exec ruby app.rb
 
