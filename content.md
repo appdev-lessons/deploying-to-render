@@ -106,8 +106,8 @@ Detailed instructions on creating Blueprints can be found in the [Render Docs](h
 1. Go to your Render [dashboard](https://dashboard.render.com/).
 2. Click on "Blueprints" and then "New Blueprint Instance." (Note: you can also click the "New +" button on the top and select "Blueprint".)
 
-    ![](/assets/render-new-blueprint-1.png)
-    {: .bleed-full }
+  ![](/assets/render-new-blueprint-1.png)
+  {: .bleed-full }
 
 3. Connect to GitHub: Make sure to connect Render to your GitHub account and select the repository you want to deploy. If you don't see the repository you want to deploy, click "configure account" to allow Render access to the repository you want to deploy. It's a good idea to only allow access to the repositories you'd like to deploy. After you follow the steps below, you will need to wait a few minutes while your app builds and deploys.
 
