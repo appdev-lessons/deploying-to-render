@@ -155,6 +155,11 @@ In your web service, you can monitor deployments, logs, environment variables, a
 
 And that's it! Your web site is live, and you can share the link with anyone. 🎉
 
+<div class="bg-blue-100 py-1 px-5" markdown="1">
+
+Here's something neat: Because we set Render to deploy from our `main` branch and connected the app with the GitHub repository, anytime you make a change to your app and commit and push that change, the live app will re-deploy with your updates!
+</div>
+
 If you want a custom domain name for your app, you can follow the steps outlined in [this manual from Render](https://render.com/docs/custom-domains).
 
 You've successfully deployed your Ruby app on Render! Now your creation is accessible to the world. Feel free to experiment, expand your app, and keep learning.
