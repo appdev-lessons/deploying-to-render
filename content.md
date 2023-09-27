@@ -53,49 +53,7 @@ services:
     startCommand: "./bin/render-start.sh"
 ```
 
-<aside markdown="1">
-For more complex applications, you might define additional resources like databases or Redis servers that need to be deployed together. Checkout [this render.yaml file](https://render.com/docs/deploy-rails#use-renderyaml-to-deploy) for a Ruby on Rails app with a Postgresql database.
-</aside>
-
-
-#### Build scripts
-
-Now, we need to create two files referenced in `render.yaml`: `bin/render-build.sh` and `bin/render-start.sh`. Create those two files in your repository. Copy and paste this contents into those files.
-
-`bin/render-build.sh`:
-
-```
-#!/usr/bin/env bash
-# exit on error
-set -o errexit
-
-bundle install
-
-# For Ruby on Rails apps uncomment these lines to precompile assets and migrate your database.
-# bundle exec rake assets:precompile
-# bundle exec rake assets:clean
-# bundle exec rake db:migrate
-```
-
-`bin/render-start.sh`:
-
-```
-#!/usr/bin/env bash
-# exit on error
-set -o errexit
-
-# Uncomment the line depending on the framework you are deploying
-
-# Sinatra
-# bundle exec ruby app.rb
-
-# Ruby on Rails
-# bundle exec puma -C config/puma.rb
-```
-
-These scripts instruct the server to install the required gems and run your application.
-
-Commit and push these changes to your repository to proceed.
+Commit and push this change to your repository to proceed.
 
 ### Create a new Blueprint
 
