@@ -4,6 +4,11 @@ Congratulations! You've built a web application using Ruby, and now it's time to
 
 Use your GitHub account to [sign-up](https://dashboard.render.com/register), and let’s see how we can serve our app.
 
+<div class="bg-blue-100 py-1 px-5" markdown="1">
+
+The steps in the lesson will allow you to deploy both static HTML websites and dynamic Sinatra apps. For Rails apps, there are a few other steps to take. Another guide will be available for that when you reach Rails.
+</div>
+
 ## Render Offering and Payment
 
 Render offers a free usage tier known as the "[Individual Plan](https://render.com/pricing)" that is perfect for hosting side projects and learning purposes. This plan includes 750 hours of running time per month, 100 GB of egress bandwidth, and 500 build minutes. The best part is, no credit card is required for the free tier.
