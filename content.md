@@ -20,7 +20,8 @@ If you decide to host larger apps, and want something more powerful to serve rea
 
 ## Aside: How does Render work?
 
-Render supports direct deployment of Ruby applications without the need for containers (eg Fly.io). You can deploy your Ruby app by connecting it to your Git repository. Whenever you merge into your `main` branch, Render copies all of your code to a server and runs the app similar to how you might in a Codespace environment.
+Render supports direct deployment of Ruby applications without the need for containers (e.g. Fly.io). You can deploy your Ruby app by connecting it to your Git repository. Whenever you merge into your `main` branch, Render copies all of your code to a server and runs the app similar to how you might in a codespace.
+
 Render makes deploying Ruby applications straightforward by supporting direct deployment without the need for containers (e.g., Fly.io). The deployment process is based on an ["Infrastructure as Code"](https://render.com/docs/infrastructure-as-code) framework, where you define a `render.yaml` file to declare all the services required to deploy your app.
 
 In simple terms, whenever you make changes to your `main` branch, Render re-deploys your app automatically.
@@ -35,7 +36,7 @@ Before we deploy, let's set up the `render.yaml` file in your project repository
 
 #### `render.yaml`` file
 
-Create a new file named `render.yaml` in your project root directory and replace `MYAPPNAME` with your application's name.
+Create a new file named `render.yaml` in your project root directory and replace `MYAPPNAME` with your application's name (e.g. `hello-world` or something else; only use letters and dashes in the name, no spaces).
 
 ```yaml
 services:
@@ -43,20 +44,21 @@ services:
     name: MYAPPNAME # the name of this service, eg your app name
     env: ruby # this app is written in ruby
     plan: free # make sure to set this to free or you'll get billed $$$
-    buildCommand: "./bin/render-build.sh"
-    startCommand: "./bin/render-start.sh"
+    buildCommand: "render-build.sh"
+    startCommand: "render-start.sh"
 ```
 
 <aside markdown="1">
-  For more complex applications, you might define additional resources like databases or Redis servers that need to be deployed together. Checkout [this render.yaml file](https://render.com/docs/deploy-rails#use-renderyaml-to-deploy) for a Ruby on Rails app with a Postgresql database.
+For more complex applications, you might define additional resources like databases or Redis servers that need to be deployed together. Checkout [this render.yaml file](https://render.com/docs/deploy-rails#use-renderyaml-to-deploy) for a Ruby on Rails app with a Postgresql database.
 </aside>
 
 
 #### Build scripts
 
-Now, we need to create two files referenced in `render.yaml`: `render-build.sh` and `render-start.sh`. Copy and paste this contents into those files.
+Now, we need to create two files referenced in `render.yaml`: `bin/render-build.sh` and `bin/render-start.sh`. Create those two files in your repository. Copy and paste this contents into those files.
 
-`./bin/render-build.sh`:
+`bin/render-build.sh`:
+
 ```
 #!/usr/bin/env bash
 # exit on error
@@ -70,13 +72,17 @@ bundle install
 # bundle exec rake db:migrate
 ```
 
-`./bin/render-start.sh`:
+`bin/render-start.sh`:
+
 ```
 #!/usr/bin/env bash
 # exit on error
 set -o errexit
 
 # Uncomment the line depending on the framework you are deploying
+
+# Static HTML
+# bundle exec rackup
 
 # Sinatra
 # bundle exec ruby app.rb
@@ -100,31 +106,57 @@ Detailed instructions on creating Blueprints can be found in the [Render Docs](h
 1. Go to your Render [dashboard](https://dashboard.render.com/).
 2. Click on "Blueprints" and then "New Blueprint Instance."
 
-![](https://res.cloudinary.com/dmxgp9oq2/image/upload/v1689877796/image_mkjptr.png)
+    ![](/assets/render-new-blueprint-1.png)
 
-3. Connect to GitHub: Make sure to connect Render to your GitHub account and select the repository you want to deploy. If you don't see the repository you want to deploy, click "configure account" to allow Render access to the repository you want to deploy. It's a good idea to only allow access to the repositories you'd like to deploy. 
+3. Connect to GitHub: Make sure to connect Render to your GitHub account and select the repository you want to deploy. If you don't see the repository you want to deploy, click "configure account" to allow Render access to the repository you want to deploy. It's a good idea to only allow access to the repositories you'd like to deploy. After you follow the steps below, you will need to wait a few minutes while your app builds and deploys.
 
-![](https://res.cloudinary.com/dmxgp9oq2/image/upload/v1689877892/image_fxykbv.png)
+![](/assets/render-new-blueprint-2.png)
 
+---
+
+![](/assets/render-new-blueprint-3.png)
+
+---
+
+![](/assets/render-new-blueprint-4.png)
+
+![](/assets/render-new-blueprint-5.png)
 
 ### Deploy your Blueprint
 
-Now that your GitHub repository is connected, name your Blueprint, and choose the branch to deploy from.
+Now that your GitHub repository is connected, name your Blueprint, and choose the branch to deploy from (likely you should just leave this as `main`).
 
-![](https://res.cloudinary.com/dmxgp9oq2/image/upload/v1689878873/image_pkppih.png)
+---
+
+![](/assets/render-new-blueprint-6.png)
+
+---
+
+<div class="bg-red-100 py-1 px-5" markdown="1">
+
+If the Blueprint interface does not find your `render.yaml` file, it may mean that you need to [commit and push](https://learn.firstdraft.com/lessons/50-git-commit-and-push) your updated `render.yaml` file to GitHub. Do so and click "Retry", then enter a name for the Blueprint and click "Apply":
+
+![](/assets/render-new-blueprint-7.png)
+</div>
 
 Render will detect the `render.yaml` file and start deploying your application. 🪄
 
 When the deployment is complete, click on your new web service.
 
-![](https://res.cloudinary.com/dmxgp9oq2/image/upload/v1689879037/image_dgr4na.png)
+---
+
+![](/assets/render-new-blueprint-8.png)
+
+---
 
 In your web service, you can monitor deployments, logs, environment variables, and more. Most importantly, you'll get a live URL to visit your app.
 
-![](https://res.cloudinary.com/dmxgp9oq2/image/upload/v1689879079/image_cceiob.png)
+![](/assets/render-new-blueprint-9.png)
 
 And that's it! Your web site is live, and you can share the link with anyone. 🎉
 
 If you want a custom domain name for your app, you can follow the steps outlined in [this manual from Render](https://render.com/docs/custom-domains).
 
 You've successfully deployed your Ruby app on Render! Now your creation is accessible to the world. Feel free to experiment, expand your app, and keep learning.
+
+---
