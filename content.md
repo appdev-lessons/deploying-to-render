@@ -138,7 +138,7 @@ Now that your GitHub repository is connected, name your Blueprint, and choose th
 
 <div class="bg-red-100 py-1 px-5" markdown="1">
 
-If the Blueprint interface does not find your `render.yaml` file, it may mean that you need to [commit and push](https://learn.firstdraft.com/lessons/50-git-commit-and-push) your updated `render.yaml` file to GitHub. Do so and click "Retry", then enter a name for the Blueprint and click "Apply":
+If the Blueprint interface does not find your `render.yaml` file, it may mean that you need to [commit and push](https://learn.firstdraft.com/lessons/50-git-commit-and-push) your updated `render.yaml` file to GitHub. Do so and click "Retry":
 
 ![](/assets/render-new-blueprint-7.png)
 </div>
