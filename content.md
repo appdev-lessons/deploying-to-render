@@ -45,7 +45,7 @@ services:
     env: ruby # this app is written in ruby
     plan: free # make sure to set this to free or you'll get billed $$$
     buildCommand: "./bin/render-build.sh"
-    startCommand: ".bin/render-start.sh"
+    startCommand: "./bin/render-start.sh"
 ```
 
 <aside markdown="1">
