@@ -47,8 +47,8 @@ services:
     name: MYAPPNAME # the name of this service, eg your app name
     env: ruby # this app is written in ruby
     plan: free # make sure to set this to free or you'll get billed $$$
-    buildCommand: "./bin/render-build.sh"
-    startCommand: "./bin/render-start.sh"
+    buildCommand: "./bin/render-build.sh" # we already created these two files for you
+    startCommand: "./bin/render-start.sh" 
 ```
 
 Commit and push this change to your repository to proceed.
