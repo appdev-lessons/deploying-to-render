@@ -43,7 +43,7 @@ Before we deploy, let's set up the `render.yaml` file in your project repository
 
 Create a new file named `render.yaml` in your project root directory and replace `MYAPPNAME` with your application's name (e.g. `hello-world` or something else; only use letters and dashes in the name, no spaces).
 
-```yaml
+```yaml{3:(11-19)}
 services:
   - type: web
     name: MYAPPNAME # the name of this service, eg your app name
