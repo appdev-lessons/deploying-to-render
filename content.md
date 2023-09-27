@@ -44,8 +44,8 @@ services:
     name: MYAPPNAME # the name of this service, eg your app name
     env: ruby # this app is written in ruby
     plan: free # make sure to set this to free or you'll get billed $$$
-    buildCommand: "render-build.sh"
-    startCommand: "render-start.sh"
+    buildCommand: "./bin/render-build.sh"
+    startCommand: ".bin/render-start.sh"
 ```
 
 <aside markdown="1">
