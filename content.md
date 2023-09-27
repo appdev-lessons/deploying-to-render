@@ -104,7 +104,7 @@ Detailed instructions on creating Blueprints can be found in the [Render Docs](h
 </aside>
 
 1. Go to your Render [dashboard](https://dashboard.render.com/).
-2. Click on "Blueprints" and then "New Blueprint Instance."
+2. Click on "Blueprints" and then "New Blueprint Instance." (Note: you can also click the "New +" button on the top and select "Blueprint".)
 
     ![](/assets/render-new-blueprint-1.png)
 
