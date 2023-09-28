@@ -35,7 +35,9 @@ Now, let's dive into deploying your app!
 
 Before we deploy, let's set up the `render.yaml` file in your project repository. This file tells Render how to manage your app's deployment.
 
-Open the file called `render.yaml` in your codespace (you should see it on the left panel file explorer in the root directory, i.e. not in a sub-folder). If you don't find the file, you can create it, and _carefully_ copy and paste this code into that new `render.yaml` file:
+Open the file called `render.yaml` in your codespace (you should see it on the left panel file explorer in the root directory, i.e. not in a sub-folder). 
+
+If you don't find the file, you can create it, and _carefully_ copy and paste this code into that new `render.yaml` file:
 
 ```yaml{3}
 services:
