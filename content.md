@@ -35,7 +35,7 @@ Before we deploy, let's set up the `render.yaml` file in your project repository
 
 #### `render.yaml`` file
 
-Created a new file named `render.yaml` in your project root directory and replace `MYAPPNAME` with your application's name.
+Createdfd;alsfj;alf a new file named `render.yaml` in your project root directory and replace `MYAPPNAME` with your application's name.
 
 ```yaml
 services:
